@@ -21,9 +21,9 @@ class CodeGithubComponent extends Component {
                     title="akshay/personal-portfolio"
                     avatar="github.png"
                   />
-                    <CardText>This application is made with React and Material UI. Check out my code on Github.</CardText>
+                    <CardText>This application is made with React and Material UI. Check out the source code on Github.</CardText>
                     <CardActions>
-                        <FlatButton label="View on github" href="https://github.com/salomonelli/personal-portfolio" target="_blank"/>
+                        <FlatButton label="View on github" href="https://github.com/akshaykmr080/personal-portfolio" target="_blank"/>
                     </CardActions>
                 </Card>
             </div>
