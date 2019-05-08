@@ -1,0 +1,16 @@
+.introduction {
+  text-align: center;
+  display: inline-block;
+  
+}
+.introduction--image{
+  transition: all;
+}
+.introduction--image:hover {
+  filter: blur(3px) brightness(90%);
+  transform: filter .5s ease-out;
+}
+.introduction-text {
+  margin-bottom: 0;
+  font-size: 1.3rem;
+}

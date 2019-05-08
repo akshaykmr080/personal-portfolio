@@ -1,0 +1,40 @@
+.education {
+    color: #fff;
+    width: 49%;
+    padding: 5rem;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 10;
+    
+    cursor: pointer;
+}
+.education:first-child {
+    border-right: .5px solid #fff;
+    padding-left: 0px;
+}
+
+.course {
+    display: inline-block;
+    transition: transform .5s;
+}
+.course:hover {
+    transform: scale(1.15);
+}
+
+.data-container {
+    display: flex;
+}
+
+@media only screen and (max-width: 600px) {
+    .education {
+        padding: 1rem;
+    }
+    .education:first-child {
+        border-right: none;
+        padding-left: 1rem;
+    }
+    .data-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}

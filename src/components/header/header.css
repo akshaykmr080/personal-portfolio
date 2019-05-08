@@ -1,0 +1,93 @@
+.header {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  color: white;
+}
+
+.header-wrapper {
+  position: relative;
+}
+
+.scroll-down-btn {
+  text-align: center;
+  position: absolute;
+  bottom: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.header h6 {
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.header h3 {
+  text-transform: uppercase;
+  letter-spacing: 9px;
+}
+
+.header-name1{
+  font-size: 1.2rem;
+  animation: moveInFromLeft 1s ease-out;
+}
+
+.header-name2{
+  font-size: 1.2rem;
+  animation: moveInFromRight 1s ease-out;
+}
+
+.header-position {
+  font-size: .7rem;
+  animation: moveInFromBottom 1s ease-out .7s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes moveInFromLeft {
+  0% {
+      opacity: 0;
+      transform: translateX(-30%)
+  }
+
+  60% {
+      opacity: 0.5;
+      transform: translateX(5%)
+  }
+
+  100% {
+      opacity: 1;
+      transform: translateX(0)
+  }
+}
+
+@keyframes moveInFromRight {
+  0% {
+      opacity: 0;
+      transform: translateX(30%)
+  }
+
+  60% {
+      opacity: 0.5;
+      transform: translateX(-5%)
+  }
+
+  100% {
+      opacity: 1;
+      transform: translateX(0)
+  }
+}
+
+@keyframes moveInFromBottom {
+  0% {
+      opacity: 0;
+      transform: translateY(150%)
+  }
+
+  100% {
+      opacity: 1;
+      transform: translateY(0)
+  }
+}

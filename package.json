@@ -1,0 +1,33 @@
+{
+  "name": "personal-portfolio",
+  "homepage": "https://salomonelli.github.io/personal-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "latest",
+    "@material-ui/icons": "latest",
+    "classnames": "^2.2.6",
+    "clone": "2.1.1",
+    "howler": "2.0.3",
+    "jquery": "3.2.1",
+    "lodash": "^4.17.11",
+    "material-ui": "^0.20.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-motion": "^0.5.2",
+    "react-slidedown": "^2.0.9",
+    "react-tap-event": "^2.0.1",
+    "roboto-npm-webfont": "0.0.2",
+    "scroll-to": "0.0.2",
+    "validator": "7.0.0"
+  },
+  "devDependencies": {
+    "gh-pages": "0.12.0",
+    "react-scripts": "0.9.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "deploy": "npm run build && gh-pages -d build"
+  }
+}
