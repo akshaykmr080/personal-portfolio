@@ -22,6 +22,7 @@ class CodeGithubComponent extends Component {
                     avatar="github.png"
                   />
                     <CardText>This application is made with React. Check out the source code on Github.</CardText>
+
                     <CardActions>
                         <FlatButton label="View on github" href="https://github.com/akshaykmr080/personal-portfolio" target="_blank"/>
                     </CardActions>
