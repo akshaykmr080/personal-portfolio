@@ -10,7 +10,7 @@ class IntroductionComponent extends Component {
             <Avatar src="Akshay.jpg" className="introduction--image" size={230}/>
             <p className="introduction-text">
               Loves Javascript, React and biryani.
-              Lives and breaths code. Defender of peace.
+              Lives and breathes code. Defender of peace.
               Full Stack developer, currently living in Sunnyvale, CA, USA.
             </p>
           </div>
