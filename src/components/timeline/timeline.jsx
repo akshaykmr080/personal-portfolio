@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {
     Card,
     CardHeader,
-    CardText
 } from '@material-ui/core';
 import Chip from 'material-ui/Chip';
 import './timeline.css';
@@ -10,9 +9,12 @@ import { withStyles } from '@material-ui/core/styles';
 import classnames from 'classnames';
 import IconButton from '@material-ui/core/IconButton';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
 import Collapse from '@material-ui/core/Collapse';
 import CardContent from "@material-ui/core/CardContent";
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
+import Divider from '@material-ui/core/Divider';
 
 const styles = theme => ({
   card: {
@@ -98,7 +100,7 @@ class TimelineComponent extends Component {
                 <div className="timeline-entry">
                     <Card className={classes.card}>
                         <CardHeader 
-                          title="Full Stack Developer" subheader="SAP Labs, Palo Alto"
+                          title="Full Stack Developer" subheader="SAP Labs, Palo Alto."
                           action={
                             <IconButton
                                 className={classnames(classes.expand, {
@@ -113,9 +115,23 @@ class TimelineComponent extends Component {
                           }
                           />
                         <Collapse in={this.state.expanded1} timeout="auto" unmountOnExit>
-                          <CardContent>
-                            June 2018 - Present. Development of React, Redux Applications & Java Microservices.
+                          <CardContent className="content">
+                            June 2018 - Present. 
                             <br/><br/>
+                            <List component="nav">
+                              <ListItem>
+                                <ListItemText primary="Development of React, Redux Applications & Java Microservices." />
+                              </ListItem>
+                              <Divider />
+                              <ListItem>
+                                <ListItemText primary="Improved a React chrome extension, developed react transitions & ported the entire application on to redux." />
+                              </ListItem>
+                              <Divider />
+                              <ListItem>
+                                <ListItemText primary="Developed NLP microservices for handling user queries by detecting the user intents and entity types." />
+                              </ListItem>
+                              <Divider />
+                            </List>
                               <div className="timeline-entries">
                                 <div className="timeline-entry-chip">
                                   <Chip>React 16+</Chip>
@@ -127,7 +143,7 @@ class TimelineComponent extends Component {
                                   <Chip>Java 8</Chip>
                                 </div>
                                 <div className="timeline-entry-chip">
-                                  <Chip>SASS</Chip>
+                                  <Chip>NLP</Chip>
                                 </div>
                                 <div className="timeline-entry-chip">
                                   <Chip>Java Spring</Chip>
@@ -146,8 +162,8 @@ class TimelineComponent extends Component {
                   <div className="timeline-entry">
                     <Card className={classes.card}>
                         <CardHeader 
-                          title="Software Developer" 
-                          subtitle="Testo	SE	&	Co.	KGaA"
+                          title="Software Developer Intern" 
+                          subheader="Emune Systems, Los Angeles"
                           action={
                             <IconButton
                                 className={classnames(classes.expand, {
@@ -162,30 +178,39 @@ class TimelineComponent extends Component {
                           }
                           />
                         <Collapse in={this.state.expanded2} timeout="auto" unmountOnExit>
-                            <CardContent>
-                                October	2016 - October 2017. Development of Microservices, UX-Consulting.
+                            <CardContent className="content">
+                                May 2017 - August 2017.
                                 <br/><br/>
+                                <List component="nav">
+                                  <ListItem>
+                                    <ListItemText primary="Design, development & revamp of client onboarding dashboard which involves work in Angular 4, node.js & web services." />
+                                  </ListItem>
+                                  <Divider />
+                                  <ListItem>
+                                    <ListItemText primary="Planned and Implemented micro-services." />
+                                  </ListItem>
+                                  <Divider />
+                                  <ListItem>
+                                    <ListItemText primary="Provided SSO & Passport based authentication." />
+                                  </ListItem>
+                                  <Divider />
+                                  <ListItem>
+                                    <ListItemText primary="Created Angular4 components, using angular material CSS framework and NPM’s." />
+                                  </ListItem>
+                                  <Divider />
+                                </List>
                                   <div className="timeline-entries">
                                     <div className="timeline-entry-chip">
-                                      <Chip>Angular 2</Chip>
+                                      <Chip>Angular 4</Chip>
                                     </div>
                                     <div className="timeline-entry-chip">
                                       <Chip>Docker</Chip>
                                     </div>
                                     <div className="timeline-entry-chip">
-                                      <Chip>Jenkins</Chip>
+                                      <Chip>node.js</Chip>
                                     </div>
                                     <div className="timeline-entry-chip">
-                                      <Chip>LESS</Chip>
-                                    </div>
-                                    <div className="timeline-entry-chip">
-                                      <Chip>Java Spring</Chip>
-                                    </div>
-                                    <div className="timeline-entry-chip">
-                                      <Chip>Foundation, Bootstrap</Chip>
-                                    </div>
-                                    <div className="timeline-entry-chip">
-                                      <Chip>Confluence, JIRA</Chip>
+                                      <Chip>Material UI</Chip>
                                     </div>
                                   </div>
                             </CardContent>
@@ -196,8 +221,8 @@ class TimelineComponent extends Component {
                   <div className="timeline-entry">
                     <Card className={classes.card}>
                         <CardHeader 
-                          title="Software Developer" 
-                          subtitle="Testo	SE	&	Co.	KGaA"
+                          title="Senior Software Developer" 
+                          subheader="Sonus Networks"
                           action={
                             <IconButton
                                 className={classnames(classes.expand, {
@@ -212,27 +237,38 @@ class TimelineComponent extends Component {
                           }
                           />
                         <Collapse in={this.state.expanded3} timeout="auto" unmountOnExit>
-                            <CardContent>
-                                October	2016 - October 2017. Development of Microservices, UX-Consulting.
+                            <CardContent className="content">
+                                June	2014 - October 2016.
                                 <br/><br/>
+                                <List component="nav">
+                                  <ListItem>
+                                    <ListItemText primary="Java developer in the Element Management System team which provides FCAPS functionality." />
+                                  </ListItem>
+                                  <Divider />
+                                  <ListItem>
+                                    <ListItemText primary="Developed novel features for EMS using JAVA, Hibernate, JMS, JMX, Mbeans & REST." />
+                                  </ListItem>
+                                  <Divider />
+                                  <ListItem>
+                                    <ListItemText primary="Recipient of Rising star award & Team excellence award." />
+                                  </ListItem>
+                                  <Divider />
+                                </List>
                                   <div className="timeline-entries">
                                     <div className="timeline-entry-chip">
-                                      <Chip>Angular 2</Chip>
+                                      <Chip>Java 8</Chip>
                                     </div>
                                     <div className="timeline-entry-chip">
-                                      <Chip>Docker</Chip>
+                                      <Chip>Hibernate</Chip>
                                     </div>
                                     <div className="timeline-entry-chip">
-                                      <Chip>Jenkins</Chip>
+                                      <Chip>Postgress</Chip>
                                     </div>
                                     <div className="timeline-entry-chip">
-                                      <Chip>LESS</Chip>
+                                      <Chip>JMS</Chip>
                                     </div>
                                     <div className="timeline-entry-chip">
                                       <Chip>Java Spring</Chip>
-                                    </div>
-                                    <div className="timeline-entry-chip">
-                                      <Chip>Foundation, Bootstrap</Chip>
                                     </div>
                                     <div className="timeline-entry-chip">
                                       <Chip>Confluence, JIRA</Chip>
