@@ -330,6 +330,35 @@ function PebbleComponent(props) {
                 moveIn='moveInFromLeft'
                 show={pebbles[21]}
             />
+            <Pebble 
+                height=".7rem" 
+                width="1.2rem" 
+                backgroundColor={infinityStoneColors[2]} 
+                opacity="0.8" 
+                top="18rem" 
+                left="3rem" 
+                borderTopLeftRadius="75%" 
+                borderTopRightRadius="98%" 
+                borderBottomRightRadius="61%" 
+                borderBottomLeftRadius="48%"
+                animationTiming="4s"
+                moveIn='moveInFromLeft'
+                show={pebbles[22]}
+            />
+            <Pebble 
+                height="1.7rem" 
+                width="1.9rem" 
+                backgroundColor={infinityStoneColors[2]} 
+                opacity="0.8" 
+                top="33rem" 
+                left="22rem" 
+                borderTopLeftRadius="55%" 
+                borderTopRightRadius="98%" 
+                borderBottomRightRadius="70%" 
+                borderBottomLeftRadius="48%"
+                animationTiming="5s"
+                show={pebbles[23]}
+            />
         </div>
     )
 }

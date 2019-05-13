@@ -27,9 +27,9 @@ class HeaderComponent extends Component {
     }
 
     toggleState() {
-      let pebblesCopy = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+      let pebblesCopy = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
       if(!this.state.toggled){
-          pebblesCopy = Array.from({length: 22}, () => Math.floor(Math.random() * 2));
+          pebblesCopy = Array.from({length: 24}, () => Math.floor(Math.random() * 2));
       }
       this.setState({toggled: !this.state.toggled, pebbles: pebblesCopy})
 
