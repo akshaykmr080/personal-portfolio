@@ -14,6 +14,7 @@ import CodeGithubComponent from './components/code-github/code-github';
 import ContactComponent from './components/contact/contact';
 import FooterComponent from './components/footer/footer';
 import EducationComponent from './components/education/education';
+import PebbleComponent from './components/pebbleComponent/pebble';
 
 class App extends Component {
   render() {

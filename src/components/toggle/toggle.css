@@ -1,0 +1,37 @@
+
+
+.toggle-body {
+  width: 7rem;
+  height: 4rem;
+  position: absolute;
+  top: 60%;
+  left: 35%;
+  background: white;
+  border-radius: 2rem;
+  transform: rotate(0deg);
+  transition: 1s cubic-bezier(0.68, -0.15, 0.265, 1.35);
+}
+.toggle-body--on {
+  transform: rotate(180deg);
+  transition: 1s cubic-bezier(0.68, -0.15, 0.265, 1.35);
+}
+.toggle-btn {
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  top: calc(50% - 2rem / 2);
+  left: calc(27% - 2rem / 2);
+  border-radius: 2rem;
+  background: black;
+  cursor: pointer;
+  transform: rotate(0deg);
+  transform-origin: 130% 115%;
+  transition: 1s cubic-bezier(0.68, -0.15, 0.265, 1.35);
+}
+.toggle-btn--on {
+  transition: 1s cubic-bezier(0.68, -0.15, 0.265, 1.35);
+  transform: rotate(-357deg);
+  background: black;
+  transform-origin: 130% 150%;
+}
+

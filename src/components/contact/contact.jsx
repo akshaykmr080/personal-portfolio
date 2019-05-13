@@ -14,7 +14,6 @@ class ContactComponent extends Component {
       email: '',
       errorMessage: null,
       successMessage: null,
-      messageAlreadySent: false,
       loading: false
     }
   }
@@ -42,15 +41,19 @@ class ContactComponent extends Component {
     this.setState({errorMessage: null});
     this.displayLoadingBar();
     try {
-      if (this.state.messageAlreadySent)
-        throw new Error('Your message has been already sent.');
       this.validateForm();
       await this.submitData();
-      this.setState({successMessage: 'Your message has been sent.'});
-      this.setState({messageAlreadySent: true});
+      this.setState({successMessage: 'Your message has been sent.', 
+                     name: '',
+                     message: '',
+                     email: '',
+                     errorMessage: null});
+       setTimeout(() => {
+          this.setState({successMessage: null})
+       }, 2000);
+
     } catch (err) {
-      this.setState({errorMessage: err.toString()});
-      this.setState({successMessage: null});
+      this.setState({errorMessage: err.toString(), successMessage: null});
     }
     this.displayLoadingBar(false);
   }
@@ -79,21 +82,21 @@ class ContactComponent extends Component {
       <div className="contact">
         <p className="headline">Contact</p>
         <p>Are you nosy? Then write me a message:</p>
-          <TextField hintText="Name" floatingLabelText="Name" style={{
+          <TextField hintText="Name" floatingLabelText="Name" value={this.state.name} style={{
             "width": "100%"
           }} floatingLabelFocusStyle={{
             "color": "#A80202"
           }} underlineFocusStyle={{
             "borderColor": "#A80202"
           }} onChange={e => this.onUpdateField('name', e)}/>
-          <TextField hintText="E-mail" floatingLabelText="E-mail" type="email" style={{
+          <TextField hintText="E-mail" floatingLabelText="E-mail" value={this.state.email} type="email" style={{
             "width": "100%"
           }} floatingLabelFocusStyle={{
             "color": "#A80202"
           }} underlineFocusStyle={{
             "borderColor": "#A80202"
           }} onChange={e => this.onUpdateField('email', e)}/>
-          <TextField hintText="Whats on your mind???" floatingLabelText="Whats on your mind???" style={{
+          <TextField hintText="Whats on your mind???" floatingLabelText="Whats on your mind???" value={this.state.message} style={{
             "width": "100%"
           }} multiLine={true} rows={2} floatingLabelFocusStyle={{
             "color": "#A80202"

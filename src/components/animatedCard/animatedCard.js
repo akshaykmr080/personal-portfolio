@@ -68,7 +68,7 @@ class AnimatedCard extends React.Component {
                         style={{ opacity: `${x}`, transform: `scale(${y})` }}>
                         
                         <div className="card-side" style={{transform: `rotateY(${rotateFront}deg)` }}>
-                            <Card className="card" >
+                            <Card className={classes.card} >
                                 <CardHeader
                                 avatar={
                                     <Avatar aria-label="Recipe" className={classes.avatar}>
